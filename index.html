@@ -187,7 +187,7 @@
   </button>
 
   <!-- More Works Dropdown -->
-  <div class="more-works-container">
+  <!-- <div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
       More Works
@@ -201,19 +201,14 @@
         </button>
       </div>
       <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
         <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
           <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
             <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
             <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
             <span class="work-venue">Conference/Journal 2024</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <!-- TODO: Add more related works or remove extra items -->
         <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Paper Title 2</h5>
@@ -232,7 +227,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <main id="main-content">
   <section class="hero">
@@ -241,23 +236,25 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title" style="font-size: xx-large;">Structure-Aware Feature Rectification with Region Adjacency Graphs for
+Training-Free Open-Vocabulary Semantic Segmentation</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://qiming-huang.github.io/" target="_blank">Qiming Huang</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://haoai-1997.github.io/" target="_blank">Hao Ai</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://jianbojiao.com/" target="_blank">Jianbo Jiao</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <span class="author-block"><a href="https://mix.jianbojiao.com/">MIx Group</a>, University of Birmingham<br>
+                        <img src="static/images/wacv-navbar-logo.svg" alt="WACV 2026" style="height: 4em;" class="wacv-logo"></span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -275,7 +272,7 @@
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/wacv2026_rag_ovs_supplementary_materials.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -315,21 +312,18 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -341,7 +335,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Benefiting from the inductive biases learned from large-scale datasets, open-vocabulary semantic segmentation (OVSS) leverages the power of vision-language models, such as CLIP, to achieve remarkable progress without requiring task-specific training. However, due to CLIP’s pretraining on image-text pairs, it tends to focus on global semantic alignment, resulting in suboptimal performance when associating fine-grained visual regions with text. This leads to noisy and inconsistent predictions, particularly in local areas. We attribute this to a dispersed bias stemming from its contrastive training paradigm, which is difficult to alleviate using CLIP features alone. To address this limitation, we propose a structure-aware feature rectification strategy that incorporates instance-specific priors derived directly from the image. Specifically, we construct a region adjacency graph (RAG) based on low-level feature (e.g.  colour and texture) to capture local structural relationships and use it to refine CLIP features by enhancing local discrimination. Extensive experiments show that our method effectively suppresses segmentation noise, improves region-level consistency, and achieves strong performance on multiple open-vocabulary segmentation benchmarks.
           </p>
         </div>
       </div>
@@ -350,102 +344,209 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Image left and text right -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-vcentered">
+      
+      <div class="column is-6">
+        <figure class="image">
+          <img src="static/images/first_image.png" alt="Pipeline Overview">
+        </figure>
+      </div>
+
+      <div class="column is-6">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Illustration of the idea and corresponding performance.</strong> High-level feature region adjacency graphs (RAGs) introduce local noise, while low-level colour-based RAGs maintain clean structure. The RAGs built on CLIP and DINO pretrained features exhibit noisy and inconsistent connectivity in local regions (as seen in the zoomed-in areas), when compared to the low-level based one. This highlights the potential of low-level cues for tasks requiring fine-grained local modelling, such as image segmentation. Bottom: Comparison of average performance scores across multiple datasets using different features for RAG construction. C.-only: colour-based features, and C. + G.: colour and texture features.            
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Image above and text below -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered">RAG-guided Attention</h2>
+
+    <figure class="image mb-5">
+      <img src="static/images/rag_bias.png" alt="RAG-guided Attention" style="height: 60%;">
+    </figure>
+
+    <div class="content has-text-justified">
+      <p>
+      <strong>Illustration of different attention bias mechanism.</strong> The first column shows the input images. The second column visualises the traditional Gaussian kernel, which models spatial proximity in a local window. The third column shows the RAG-bias computed from the Region Adjacency Graph (RAG), capturing structural relationships between neighbouring regions. The fourth column combines both Gaussian kernel and RAG-bias to form a bilateral attention bias, which accounts for both spatial distance and local structure.
+      </p>
+    </div>
+
+  </div>
+</section> -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-vcentered">
+
+      <div class="column is-6">
+        <h2 class="title is-3">RAG-guided Attention</h2>
+        <div class="content has-text-justified">
+          <p><strong>Illustration of different attention bias mechanism.</strong> The first column shows the input images. The second column visualises the traditional Gaussian kernel, which models spatial proximity in a local window. The third column shows the RAG-bias computed from the Region Adjacency Graph (RAG), capturing structural relationships between neighbouring regions. The fourth column combines both Gaussian kernel and RAG-bias to form a bilateral attention bias, which accounts for both spatial distance and local structure.</p>
+        </div>
+      </div>
+      <div class="column is-6">
+        <figure class="image">
+          <img src="static/images/rag_bias.png" alt="Description">
+        </figure>     
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-vcentered">
+
+      <div class="column is-6">
+        <!-- <h2 class="title is-3">RAG-guided Attention</h2> -->
+        <div class="content has-text-justified">
+          <p><strong>Overview of the proposed RAG-guided attention mechanism.</strong> The bilateral attention bias is computed by combining a spatial Gaussian kernel with a structure-aware RAG-bias. This combined bias is integrated into the attention weights to enhance structural sensitivity. Right: visualisation of the Gaussian and bilateral attention maps.</p>
+        </div>
+      </div>
+      <div class="column is-6">
+        <figure class="image">
+          <img src="static/images/rag_atten.png" alt="Description">
+        </figure>     
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+
+  </div>
+</section>
+
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+
+      <div class="columns is-centered">
+        <div class="column is-8">
+
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/res_1.png" alt="First research result visualization" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Table 1. Quantitative results on various OVSS benchmarks. Our method consistently improves different CLIP-based baselines across all datasets, demonstrating its generality and effectiveness.
+              </h2>
+            </div>
+
+            <div class="item">
+              <img src="static/images/res_2.png" alt="Second research result visualization" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Table 2. Component ablation results based on the NACLIP model.
+              </h2>
+            </div>
+
+            <div class="item">
+              <img src="static/images/res_3.png" alt="Third research result visualization" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Table 3. Performance comparison using different feature types to construct RAG edges...
+              </h2>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-vcentered">
+      
+      <div class="column is-6">
+        <figure class="image">
+          <img src="static/images/res_5.png" alt="Pipeline Overview">
+        </figure>
+      </div>
+
+      <div class="column is-6">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            The qualitative results of ours method. For more challenging cases, such as grayscale and stylised images (e.g. , oil paintings), please refer to the Supplementary Materials.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+            
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
+          
           <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+          
             <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
+          
           <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
+          
             <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -468,6 +569,17 @@
   </section>
 <!--End paper poster -->
 
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
+    <div class="content has-text-justified">
+      <p>
+        TBD
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
 <!--BibTex citation -->
@@ -480,12 +592,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@inproceedings{RAG-OVS,
+  title     = {Structure-Aware Feature Rectification with Region Adjacency Graphs for Training-Free Open-Vocabulary Semantic Segmentation},
+  author    = {Huang, Qiming and Ai, Hao and Jiao, Jianbo},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year      = {2026}
 }</code></pre>
     </div>
 </section>
